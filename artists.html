@@ -4,71 +4,11 @@
   
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
-<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js" ></script>
 
-<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
-
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="jquery.js" ></script>
+<script type="text/javascript" charset="utf-8" src="jquery-mobile.js" ></script> 
 	 
-	 <script>
-var googleMapsState = "";
- 
-document.addEventListener("deviceready", setup, false);
- 
-function setup() {
-    loadGoogleMaps();
- 
-    document.addEventListener("online", function(e) {
-        if (googleMapsState == "" || googleMapsState == "error") {
-            loadGoogleMaps();
-        }
-    }, false);
-}
- 
-function loadGoogleMaps() {
-    googleMapsState = "loading";
- 
-    var script = document.createElement("script");
-    script.src = "http://maps.google.com/maps/api/js?v=3.7&sensor=true&callback=googleMapsReady";
-    script.type = "text/javascript";
- 
-    script.addEventListener("error", function(e) {
-        googleMapsState = "error";
-    }, false);
- 
-    script.addEventListener("load", function(e) {
-        setTimeout(function() {
-            if (googleMapsState == "loading") googleMapsState = "error";
-        }, 5000);
-    }, false);
- 
-    document.getElementsByTagName("head")[0].appendChild(script);
-}
- 
-function googleMapsReady() {
-    googleMapsState = "ready";
-}
- 
-function checkGoogleMapsAvailability() {
-    var connectionState = navigator.network.connection.type;
-    if (connectionState == Connection.NONE || connectionState == Connection.UNKNOWN) {
-        return "No network connection available";
-    }
- 
-    if (googleMapsState == "" || googleMapsState == "error") {
-        return "Maps are not currently available";
-    }
- 
-    if (googleMapsState == "loading") {
-        return "Maps are loading, try again aoon";
-    }
- 
-    return "";
-}
-	 </script>
-    
+    <link rel="stylesheet" type="text/css" href="jquery-mobile.css">
   </head>
 <body> 
 
@@ -79,37 +19,37 @@ function checkGoogleMapsAvailability() {
 		<!-- <h1>Falkenbergs Rockfest</h1> -->
 	</div><!-- /header -->
 
-		
+		<div data-role="content">
 	 <ul data-role="listview" data-inset="true">
             <li><a href="#">
-                
+                <img src="images/dad.png">
                 <h2>D-A-D</h2>
-                <p>Apple released iOS 6.1</p>
+                <p>Bandet bildades i Köpenhamn, Danmark 1982 under namnet Disneyland After Dark...</p>
                 
             </a></li>
             <li><a href="#">
-                
+                <img src="images/amaranthe.jpg">
                 <h2>Amaranthe</h2>
-                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+                <p>Amaranthe är ett svensk-danskt power-melodisk death metal-band med inslag av electronica</p>
                
             </a></li>
             <li><a href="#">
-               
+				<img src="http://s.cdon.com/media-dynamic/images/product/music/album/image0/chapter_2-14319748-frntl.jpg">
                 <h2>Nicke Borg Homeland</h2>
-                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
+                <p>Men två årtionden av hårt liv och hårt turnerande med en av Sveriges främsta hårdrocksband </p>
                 
             </a></li>
            
         </ul>
 		
-
+</div>
 	
 	<div data-role="footer" data-id="foo1" data-position="fixed">
 	<div data-role="navbar">
 		<ul>
 			<li><a href="index.html" data-icon="home">Hem</a></li>
 			<li><a href="about.html" data-icon="info">Info</a></li>
-			<li><a href="artists.html" data-icon="grid">Artister</a></li>
+			<li><a href="artists.html" class="ui-btn-active" data-icon="grid">Artister</a></li>
 			<li><a href="map.html" data-icon="star">Karta</a></li>
 		</ul>
 	</div><!-- /navbar -->
