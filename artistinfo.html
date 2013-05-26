@@ -11,8 +11,12 @@
 
 <script>
 	$(function(){
-		$('#loadartist').load('http://109.74.10.168/linus/frf_server/server.asp?action=1',function(){
-			$('#loadartist ul').listview()
+	var split = location.search.replace('?', '').split('=')
+
+		$('#loadartist').load('http://109.74.10.168/linus/frf_server/server.asp?action=2&id='+split[1],function(){
+		
+		
+
 		});
 	});
 </script>
@@ -36,10 +40,10 @@
 	<div data-role="footer" data-id="foo1" data-position="fixed">
 	<div data-role="navbar">
 		<ul>
-			<li><a href="index.html" data-icon="home" data-transition="slide" data-ajax="false">Hem</a></li>
-			<li><a href="about.html" data-icon="info" data-transition="slide" data-ajax="false">Info</a></li>
-			<li><a href="artists.html" class="ui-btn-active" data-icon="grid" data-ajax="false" data-transition="slide">Artister</a></li>
-			<li><a href="map.html" data-icon="star" data-transition="slide" data-ajax="false">Karta</a></li>
+			<li><a href="index.html" data-icon="home" data-transition="slide">Hem</a></li>
+			<li><a href="about.html" data-icon="info" data-transition="slide">Info</a></li>
+			<li><a href="artists.html" class="ui-btn-active" data-icon="grid" data-transition="slide">Artister</a></li>
+			<li><a href="map.html" data-icon="star" data-transition="slide">Karta</a></li>
 		</ul>
 	</div><!-- /navbar -->
 </div><!-- /footer -->
