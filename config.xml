@@ -33,5 +33,6 @@
 <access origin="http://*.google.com" />
 <access origin="*" />
 
-
+<icon src="icon.png" />
+  
 </widget>
