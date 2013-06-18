@@ -11,7 +11,40 @@
 
 <link rel="stylesheet" type="text/css" href="jquery-mobile.css">
 	 
-    
+    <script>
+		$(function(){
+		
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+		$('#mainpage').load('http://109.74.10.168/linus/frf_server/server.asp?action=3')
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+	 showAlert()
+		});
+	</script>
   </head>
 <body> 
 
@@ -22,107 +55,13 @@
 		<!-- <h1>Falkenbergs Rockfest</h1> -->
 	</div><!-- /header -->
 
-	<div data-role="content">	
+	<div data-role="content" data-theme="a">	
 	
 	
 	
 	<!-- Förstasidan -->
 	<div id="mainpage" class="mypages" data-theme="a">
-		<table>
-		<tr>
-				<td>
-					<table>
-						<tr>
-							<td><b>2013-03-15</b></td>
-						</tr>
-						<tr>
-							<td>
-						Nu går det att köpa biljetter till årets upplaga av Falkenberg Rockfest. Försäljningen sker via Tickster
-							</td>
-						</tr>
-					</table>
-				</td>	
-			</tr>
-			<!-- breaker-->
-		<tr>
-				<td>
-					<table>
-						<tr>
-							<td><b>2013-03-11</b></td>
-						</tr>
-						<tr>
-							<td>
-						Fredagen den 15 mars släpps årets biljetter.
-							</td>
-						</tr>
-					</table>
-				</td>	
-			</tr>
-			<!-- breaker-->
 		
-		<tr>
-				<td>
-					<table>
-						<tr>
-							<td><b>2013-03-09</b></td>
-						</tr>
-						<tr>
-							<td>
-						Nästa klara band för Falkenberg Rockfest är Nicke Borg Homeland
-							</td>
-						</tr>
-					</table>
-				</td>	
-			</tr>
-			<!-- breaker-->
-		
-		<tr>
-				<td>
-					<table>
-						<tr>
-							<td><b>2013-03-02</b></td>
-						</tr>
-						<tr>
-							<td>
-						Första klara bandet för Falkenberg Rockfest är Amaranthe.
-							</td>
-						</tr>
-					</table>
-				</td>	
-			</tr>
-			<!-- breaker-->
-			<tr>
-				<td>
-					<table>
-						<tr>
-							<td><b>2013-02-23</b></td>
-						</tr>
-						<tr>
-							<td>
-							I nästa vecka börjar vi bandsläppen för Falkenberg Rockfests andra upplaga som äger rum på Vallarna den 24 augusti.
-Vårt mål är som tidigare att bjuda på en stor bredd inom rockmusiken där man kan se allt från lokala band till större etablerade artister.
-							</td>
-						</tr>
-					</table>
-				</td>	
-			</tr>
-			<!-- breaker-->
-			<tr>
-				<td>
-					<table>
-						<tr>
-							<td><b>2013-01-06</b></td>
-						</tr>
-						<tr>
-							<td>
-							
-Just nu så jobbar vi för fullt med årets upplaga av Falkenberg Rockfest och hoppas att inom kort kunna presentera vårt först band.
-							</td>
-						</tr>
-					</table>
-				</td>	
-			</tr>
-		</table>
 	</div>
 	<!--//Förstasidan -->
 	
@@ -146,8 +85,8 @@ Just nu så jobbar vi för fullt med årets upplaga av Falkenberg Rockfest och h
 	<div data-role="footer" data-id="foo1" data-position="fixed">
 	<div data-role="navbar">
 		<ul id="menunav">
-			<li><a href="index.html" id="mainpage" data-transition="slide" class="ui-btn-active" data-icon="home">Hem</a></li>
-			<li><a href="javascript:void(0)" id="infopage" data-transition="slide" data-icon="info" data-transition="slide">Info</a></li>
+			<li><a href="index.html" id="mainpage" data-transition="slide" class="ui-btn-active" data-icon="home">Nyheter</a></li>
+			<li><a href="info.html" id="infopage" data-transition="slide" data-icon="info" data-transition="slide">Info</a></li>
 			<li><a href="artists.html" id="artistpage" data-transition="slide" data-icon="grid">Artister</a></li>
 			<li><a href="map.html" id="mappage" data-transition="slide" data-icon="star">Karta</a></li>
 		</ul>

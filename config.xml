@@ -31,7 +31,7 @@
 
 <access origin="//ajax.googleapis.com" subdomains="true" />
 <access origin="http://*.google.com" />
-<access origin="http://109.74.10.168/" subdomains="true" />
+<access origin="*" />
 
 
 </widget>
