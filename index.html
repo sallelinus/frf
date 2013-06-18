@@ -35,14 +35,22 @@
     //
     function showAlert() {
         navigator.notification.alert(
-            'You are the winner!',  // message
+            'En vecka kvar till Falkenbergs Rockfest! Glöm inte ordna biljetter!',  // message
             alertDismissed,         // callback
             'Game Over',            // title
             'Done'                  // buttonName
         );
     }
 
-	 showAlert()
+	var d = new Date();
+
+var month = d.getMonth()+1;
+var day = d.getDate();
+if (month==6 && day==18)
+{
+ showAlert()
+}
+	
 		});
 	</script>
   </head>
