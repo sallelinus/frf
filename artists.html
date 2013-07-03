@@ -11,8 +11,11 @@
 
 <script>
 	$(function(){
+	$.mobile.showPageLoadingMsg();
 		$('#loadartist').load('http://109.74.10.168/linus/frf_server/server.asp?action=1',function(){
 			$('#loadartist ul').listview()
+			$.mobile.hidePageLoadingMsg
+
 		});
 	});
 </script>
