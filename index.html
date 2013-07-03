@@ -20,8 +20,10 @@
     document.addEventListener("deviceready", onDeviceReady, false);
 
     // PhoneGap is ready
-    //
-		$('#mainpage').load('http://109.74.10.168/linus/frf_server/server.asp?action=3')
+    $.mobile.showPageLoadingMsg();
+		$('#mainpage').load('http://109.74.10.168/linus/frf_server/server.asp?action=3',function(){
+		$.mobile.hidePageLoadingMsg();
+		});
     function onDeviceReady() {
         // Empty
     }
