@@ -7,10 +7,10 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Falkenbergs Rockfest</name>
+    <name>Falkenberg Rockfest</name>
 
     <description>
-        Falkenbergs Rockfests Officiella App!
+        Falkenberg Rockfests Officiella App!
     </description>
 
     <author href="" email="sallelinus@hotmail.com">
@@ -26,6 +26,7 @@
 <feature name="http://api.phonegap.com/1.0/network"/>
 <feature name="http://api.phonegap.com/1.0/notification"/>
  <preference name="webviewbounce"              value="false" />   
+ <preference name="OpenAllWhitelistURLsInWebView" value="Yes" /> 
 
 <access origin="http://code.jquery.com" subdomains="true" />
 
